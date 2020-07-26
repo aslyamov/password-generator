@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Генератор пароля</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Генератор пароля</h2>
+      <div class="result-container">
+        <span id="result"></span>
+        <button class="btn" id="clipboard">
+          <i class="far fa-clipboard"></i>
+        </button>
+      </div>
+      <div class="settings">
+        <div class="setting">
+          <label for="length">Длина пароля</label>
+          <input type="number" id="length" min="4" max="20" value="20" />
+        </div>
+        <div class="setting">
+          <label for="uppercase">Прописные буквы</label>
+          <input type="checkbox" id="uppercase" checked />
+        </div>
+        <div class="setting">
+          <label for="lowercase">Строчные буквы </label>
+          <input type="checkbox" id="lowercase" checked />
+        </div>
+        <div class="setting">
+          <label for="numbers">Цифры</label>
+          <input id="numbers" type="checkbox" checked />
+        </div>
+        <div class="setting">Специальные символы</label>
+          <input id="symbols" type="checkbox" checked />
+        </div>
+      </div>
+      <button class="btn btn-large" id="generate">
+        Создать парооль
+      </button>
+    </div>
+
+    <!-- Уведомление -->
+    <div class="notification-container" id="notification-container">
+      <p>Пароль скопирован!</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
